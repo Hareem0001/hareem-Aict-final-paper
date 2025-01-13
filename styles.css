@@ -22,10 +22,16 @@ body, h1, h2, p, ul {
     overflow: hidden;
 }
 .homepage-buttons{
- filter: invert(1);
- width: 30px;
- height: 30px;
+  width: 30px;;
+  height: 30px;
+  background-color: #ffffff; /* Light background color */
+  padding: 10px;            /* Add spacing around the image */
+  margin-right: 15px; 
+  border-radius: 8px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease;
 }
+
 .overlay {
     background: rgba(109, 107, 107, 0.5);
     width: 100%;
@@ -67,21 +73,20 @@ body, h1, h2, p, ul {
     color: white;
 }
 
-
 .hero-text h2 {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 40px;
 }
-
+@media (max-width: 768px) {
+  .hero-text h2 {
+      font-size: 24px;
+  }
+}
 .hero-text p {
     font-size: 18px;
     line-height: 1.5;
     max-width: 600px;
     margin: auto;
 }
-
-
 
 /* resolution-section code start here  */
 
@@ -659,12 +664,13 @@ body {
 }
 
 .social-icons {
-  flex: 1;
-  text-align:end;
+  display: flex;            /* Ensures children (icons) are arranged in a row */
+  justify-content: flex-end; /* Align icons to the end of the container (optional) */
+  align-items: center;       /* Vertically center the icons */
+  gap: 10px;                 /* Adds space between icons */
 }
 
 .social-icons a {
-  margin: 0 10px;
   display: inline-block;
   transition: opacity 0.3s ease;
 }
